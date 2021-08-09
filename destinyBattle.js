@@ -81,22 +81,22 @@ let lightDark = true
 // Functions //
 
 // Titan v Dark
-while(gameOver){
-    if(lightDark){
-        titan.attack(darkTitan)
-    } else {
-        darkTitan.attack(titan)
-    }
-    lightDark = !lightDark
-    if (titan.health <= 0){
-        console.log(`Darkness Previals!`)
-        gameOver = false;
-    }
-    if (darkTitan.health <= 0){
-        console.log(`The Light Previals!`)
-        gameOver = false;
-    }
-}
+// while(gameOver){
+//     if(lightDark){
+//         titan.attack(darkTitan)
+//     } else {
+//         darkTitan.attack(titan)
+//     }
+//     lightDark = !lightDark
+//     if (titan.health <= 0){
+//         console.log(`Darkness Previals!`)
+//         gameOver = false;
+//     }
+//     if (darkTitan.health <= 0){
+//         console.log(`The Light Previals!`)
+//         gameOver = false;
+//     }
+// }
 // while(gameOver){
 //     if(lightDark){
 //         titan.attack(darkHunter)
@@ -229,21 +229,24 @@ while(gameOver){
 // }
 // // Light v Savathun
 
-// const light = [titan, hunter, warlock]
-// while(gameOver){
-//     if(lightDark){
-//         titan.attack(boss)
-//         warlock.attack(boss)
-//         hunter.attack(boss)
-//     } else {
-//         boss.attack(light)
-//     }
-//     lightDark = !lightDark
-//     if (light.life <= 0){
-//         console.log(`Your light fades away. The Last City falls to darkness`)
-//         gameOver = false;
-//     }
-//     if (boss.life <= 0){
-//         console.log(`You saved The Last City of humanity!`)
-//     }
-// }
+const light = [titan, hunter, warlock]
+console.log(light)
+
+while(gameOver){
+    if(lightDark){
+        titan.attack(boss)
+        warlock.attack(boss)
+        hunter.attack(boss)
+    } else {
+        boss.attack(light)
+    }
+    lightDark = !lightDark
+    if (light.health <= 0){
+        console.log(`Your light fades away. The Last City falls to darkness`)
+        gameOver = false;
+    }
+    if (boss.health <= 0){
+        console.log(`You saved The Last City of humanity!`)
+        gameOver = false;
+    }
+}
