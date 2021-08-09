@@ -17,7 +17,7 @@ class Gaurdian {
         const ability = randomNum(this.abilities.length)
         const damage = randomNum(this.abilities[ability].strength)
         target.health -= damage
-        console.log(`${this.name} attacked ${target.name} with ${this.abilities[ability].name} for ${damage} damage leaving them with ${target.health}`)
+        console.log(`${this.name} attacked ${target.name} with ${this.abilities[ability].name} for ${damage} damage leaving them with ${target.health} health.`)
     }
 }
 class DarkGaurdian {
@@ -36,7 +36,7 @@ class DarkGaurdian {
         const ability = randomNum(this.abilities.length)
         const damage = randomNum(this.abilities[ability].strength)
         target.health -= damage
-        console.log(`${this.name} attacked ${target.name} with ${this.abilities[ability].name} for ${damage} damage leaving them with ${target.health}`)
+        console.log(`${this.name} attacked ${target.name} with ${this.abilities[ability].name} for ${damage} damage leaving them with ${target.health} health.`)
     }
 }
 class HiveGod {
@@ -55,7 +55,7 @@ class HiveGod {
         const ability = randomNum(this.abilities.length)
         const damage = randomNum(this.abilities[ability].strength)
         target.health -= damage
-        console.log(`${this.name} attacked ${target.name} with ${this.abilities[ability].name} for ${damage} damage leaving them with ${target.health}`)
+        console.log(`${this.name} attacked ${target.name} with ${this.abilities[ability].name} for ${damage} damage leaving them with ${target.health} health.`)
     }
 }
 const titan = new Gaurdian('Zavala', 'Pulse Grenade', 'Fatebringer', 'Thunder Crash')
