@@ -238,7 +238,9 @@ while(gameOver){
         warlock.attack(boss)
         hunter.attack(boss)
     } else {
-        boss.attack(light)
+        for (let i = 0; i < light.length; i++) {
+            boss.attack(light[i]); // can add random value
+        }
     }
     lightDark = !lightDark
     if (light.health <= 0){
